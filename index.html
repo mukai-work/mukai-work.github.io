@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 19px;
+        }
+
+        .m-plus-1p-regular {
+            font-family: "M PLUS 1p", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #f3f1e7;
+        }
+
+        header, #mobile-menu {
+            background-color: #d67631;
+        }
+
+        section {
+            background-color: #f5f8fa;
+            color: #333;
+        }
+
+        #main-content {
+            width: 90%;
+        }
+
+        .dli-pin-fill {
+            display: inline-block;
+            vertical-align: middle;
+            color: #333;
+            line-height: 1;
+            position: relative;
+            width: 0.7em;
+            height: 0.7em;
+            background: currentColor;
+            border: 0.1em solid currentColor;
+            border-radius: 40% 60% 0% 100% / 40% 100% 0% 60%;
+            box-sizing: content-box;
+            transform: rotate(45deg);
+        }
+
+        .dli-pin-fill::before {
+            content: '';
+            position: absolute;
+            top: 18%;
+            left: 18%;
+            width: 0.336em;
+            height: 0.336em;
+            background: #fff;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+    </style>
+    <script>
+        // ハンバーガーメニューの開閉制御
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('translate-x-full');
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+    <!-- ヘッダー -->
+    <header class="text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">M333 Studio.</h1>
+            <!-- ハンバーガーメニューアイコン (モバイル表示用) -->
+            <button class="block sm:hidden" onclick="toggleMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <!-- ナビゲーションメニュー (デスクトップ表示用) -->
+            <nav class="hidden sm:block">
+                <a href="#work" class="ml-4 text-white hover:underline">Work</a>
+                <a href="#skill" class="ml-4 text-white hover:underline">Skill</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- モバイルメニュー -->
+    <div id="mobile-menu" class="fixed top-0 right-0 w-64 h-full text-white transform translate-x-full transition-transform duration-300 sm:hidden">
+        <button class="p-4 text-right" onclick="toggleMenu()">×</button>
+        <nav class="p-4">
+            <a href="#work" class="block p-2 hover:bg-blue-800">Work</a>
+            <a href="#skill" class="block p-2 hover:bg-blue-800">Skill</a>
+        </nav>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <main id="main-content" class="container mx-auto w-100 p-6">
+        <!-- 自己紹介 -->
+        <section class="rounded shadow p-6 mb-6">
+            <div class="flex flex-col sm:flex-row items-center">
+                <img src="./img/proficon.png" alt="アイコン" class="w-24 h-24 rounded-full mr-4 mb-4 sm:mb-0">
+                <p>
+                    <span class="font-bold">Kengo Mukai(M333 Studio.)</span><br />
+                    <span class="dli-pin-fill"></span>  <span>Japan, Osaka</span><br /><br />
+                    フリーランスでエンジニアやライターや(家庭内)シェフをやっている<span class="font-bold">Mukai</span>と申します。<br />
+                    生まれも育ちも大阪府大阪市でユーモアシティーボーイとして生きてきました。<br />
+                    出身学校は、HAL大阪 Web専攻です。秋2年制で知識を詰め込みました。<br />
+                    色々省略しますが、新卒入社したベンチャー企業で2年間ぐちゃぐちゃにされ、技術力も精神力も著しく上昇したため、独立して稼働しています。
+                </p>
+            </div>
+        </section>
+
+        <!-- 職務経歴書 -->
+        <section id="work" class="rounded shadow p-6">
+            <h2 class="text-xl font-bold mb-4 text-center">Work</h2>
+            <p class="mb-4">
+                色々なことをやってきましたが、共通して言えることは一度も諦めたことがないということです。<br />
+                もちろん自分ひとりの力ですべてを解決したとは言えません。周りのメンバーや先輩を巻き込んで解決していきました。<br />
+                報連相は怠らず、進捗報告も漏れなく、PLが安心して作業を任せていただけるようなエンジニアを目指しました。<br />
+                それが伝わったのかどうかはわからないですが、案件が始まるときも呼んでいただけたり、特殊な作業を任せられたりと、<br />
+                色々な経験ができたことは私の強みとなっています。すべての関わった人に感謝を・・・
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="font-bold">インターン</h3>
+                    <p>期間：2021.4-2021.10</p>
+                    <p>内容：Webサイトの修正・コンテンツ追加</p>
+                    <p>技術：PHP, MySQL(MariaDB), Docker, Git, Slack</p>
+                    <p>ポジション：メンバー</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="font-bold">研修</h3>
+                    <p>期間：2021.10-2021.12</p>
+                    <p>内容：掲示板作成</p>
+                    <p>技術：C#, SQLServer(SSMS), Backlog, Azure</p>
+                    <p>ポジション：メンバー</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="font-bold">某ジュエリーショップECサイト構築</h3>
+                    <p>期間：2021.12-2022.3</p>
+                    <p>工程：要件定義・基本設計・詳細設計・開発・単体テスト・結合テスト・運用保守</p>
+                    <p>内容：PayPay決済機能の開発・商品レビュー機能開発</p>
+                    <p>技術：C#, SQLServer(SSMS), Backlog, Azure</p>
+                    <p>ポジション：メンバー</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="font-bold">某大手小売企業ECサイト構築</h3>
+                    <p>期間：2022.3-2023.4</p>
+                    <p>工程：要件定義・基本設計・詳細設計・開発・コードレビュー・単体テスト・結合テスト・運用保守</p>
+                    <p>内容：配送回り全て・商品一覧・商品詳細・一部決済・API連携用のバッチ</p>
+                    <p>技術：C#, SQLServer(SSMS), Backlog, Azure</p>
+                    <p>ポジション：メンバー→サブリーダー</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="font-bold">新人育成(24人)</h3>
+                    <p>期間：2023.4-2023.7</p>
+                    <p>工程：コードレビュー・テストレビュー</p>
+                    <p>内容：企業理念の浸透・技術研修・勉強会の実施</p>
+                    <p>技術：C#, SQLServer(SSMS), Backlog, Azure</p>
+                    <p>ポジション：技術コーチ</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="font-bold">某大手スポーツショップECサイト構築</h3>
+                    <p>期間：2023.4-2023.9</p>
+                    <p>工程：要件定義・基本設計・詳細設計・開発・コードレビュー・単体テスト・結合テスト・運用保守</p>
+                    <p>内容：会員登録API・決済API</p>
+                    <p>技術：C#, SQLServer(SSMS), Backlog, Azure</p>
+                    <p>ポジション：技術リーダー</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="font-bold">公共人事システム開発</h3>
+                    <p>期間：2023.9-2024.4</p>
+                    <p>工程：要件定義・基本設計・詳細設計</p>
+                    <p>内容：デザインの標準化・ワイヤーフレーム・デザインカンプ</p>
+                    <p>技術：C#, Razor, Oracle, AWS</p>
+                    <p>ポジション：サブPL</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="font-bold">医療系BIツール開発</h3>
+                    <p>期間：2024.4-現在</p>
+                    <p>工程：要件定義・基本設計・詳細設計・開発・単体テスト・結合テスト・総合テスト・運用保守</p>
+                    <p>内容：病棟利用率画面・病棟アクティビティ画面・デザインの共通化</p>
+                    <p>技術：C#, Blazor, SQLServer(SSMS), TortoiseSVN</p>
+                    <p>ポジション：メンバー</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- その他のスキル -->
+        <section id="skill" class="rounded shadow p-6">
+            <h2 class="text-xl font-bold mb-4 text-center">Tech Skill</h2>
+            <p class="mb-4">
+                専門学校時代は、PHPをメインに履修していたのですが、新卒で入ったところがC#1本の企業だったので、<br />
+                おのずとC#erへと変貌しました。業務経験はC#しかないです。<br />
+                趣味でPythonを書くこともありますが、業務では使ったことがないため端折ります。<br />
+                各カードの背景色ですが、緑に近いほどスキル感が高いものです。
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div class="bg-green-500 p-4 rounded shadow">
+                    <h3 class="font-bold">C#</h3>
+                    <p>年数: 3.5年</p>
+                    <p>FW：ASP.NET, WebForm, Razor, Blazor, Ignite UI</p>
+                </div>
+                <div class="bg-green-300 p-4 rounded shadow">
+                    <h3 class="font-bold">SQL</h3>
+                    <p>年数: 3.5年</p>
+                    <p>CRUD・クエリチューニング・トランザクション整理</p>
+                </div>
+                <div class="bg-green-500 p-4 rounded shadow">
+                    <h3 class="font-bold">HTML, CSS</h3>
+                    <p>年数: 5年</p>
+                    <p>レスポンシブ・ピクセルパーフェクト・UI設計</p>
+                </div>
+                <div class="bg-green-400 p-4 rounded shadow">
+                    <h3 class="font-bold">JavaScript</h3>
+                    <p>年数: 5年</p>
+                    <p>FW：jQuery, Vue, React, TypeScript</p>
+                </div>
+                <div class="bg-green-200 p-4 rounded shadow">
+                    <h3 class="font-bold">要件定義・基本設計・詳細設計</h3>
+                    <p>年数: 2年</p>
+                    <p>顧客折衝・ドキュメントの標準化</p>
+                </div>
+                <div class="bg-green-100 p-4 rounded shadow">
+                    <h3 class="font-bold">Webデザイン</h3>
+                    <p>年数: 1年</p>
+                    <p>ワイヤーフレーム・デザインカンプ・モック作成</p>
+                </div>
+                <div class="bg-green-100 p-4 rounded shadow">
+                    <h3 class="font-bold">リーダ業務</h3>
+                    <p>年数: 2年</p>
+                    <p>WBS・コードレビュー・テストレビュー・LT・技術問題解決</p>
+                </div>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-center">Another Skill</h2>
+            <p class="mb-4">
+                副業として、クラウドワークスで案件を請け負っています。<br />
+                もともとパチスロが趣味で、その方面の仕事もしたいなと思っているときに、YouTube台本執筆と出会いました。<br />
+                情報をまとめて限られた文字数の中に、伝わるように落とし込むのは、結構難しいですが、書いている内容が楽しいので続いてます。<br />
+                料理に関しては、生きるために身に着けていくうちに凝り始めたという感じですね。<br />
+                自信あるので、よければ食べに来てください。
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="font-bold">YouTube台本執筆(ロング・Shorts)</h3>
+                    <p>年数: 1.5年</p>
+                    <p>ジャンル：ギャンブル・政治・雑学</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded shadow">
+                    <h3 class="font-bold">料理</h3>
+                    <p>年数: 3年</p>
+                    <p>得意料理：トマトパスタ・唐揚げ</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <div class="container mx-auto">
+            <p>連絡先: k.mukai.work@gmail.com</p>
+            <p>&copy; 2024 Kengo Mukai</p>
+        </div>
+    </footer>
+</body>
+</html>
